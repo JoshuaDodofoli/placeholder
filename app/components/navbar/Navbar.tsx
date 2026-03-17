@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <nav className="fixed right-0 top-4 md:top-8">
             <Wrapper>
-                <button onClick={handleToggleMenu} className="bg-white size-11 relative cursor-pointer rounded-full flex flex-col items-center justify-center">
+                <button onClick={handleToggleMenu} className="bg-white size-11 shadow-2xs relative cursor-pointer rounded-full flex flex-col items-center justify-center">
                     <svg width="20" height="11" viewBox="0 0 20 12" fill="none">
                         <line x1="0" y1="1" x2="20" y2="1" stroke="black" strokeWidth="2" strokeLinecap="round" />
                         <line x1="0" y1="8" x2="20" y2="8" stroke="black" strokeWidth="2" strokeLinecap="round" />
@@ -27,7 +27,7 @@ const Navbar = () => {
                         {
                             links.map((link) => {
                                 return (
-                                    <li key={link.name} className="bg-black text-white px-3 py-1.5 rounded-full">
+                                    <li key={link.name} className="bg-black text-base text-white px-3 py-1.5 rounded-full">
                                         <Link href={link.path}>{link.name}</Link>
                                     </li>
                                 )
