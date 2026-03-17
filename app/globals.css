@@ -17,8 +17,9 @@
   --color-white: var(--white);
   --color-brand: var(--accent);
 
+  --font-google: var(--font-google-sans);
   --font-space: var(--font-space-grotesk);
-  
+
   --text-xs: 0.625rem; /* 10px */
   --text-sm: 0.813rem; /* 13px */
   --text-base: 1rem; /* 16px */
@@ -31,5 +32,5 @@
 }
 
 body {
-  @apply bg-paper font-space;
+  @apply bg-paper font-google;
 }
