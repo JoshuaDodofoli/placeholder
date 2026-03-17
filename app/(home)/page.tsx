@@ -2,6 +2,14 @@ import Image from "next/image";
 import Wrapper from "../components/Wrapper";
 
 export default function Home() {
+
+  const cards = [
+    { name: "Project name", description: "Project description" },
+    { name: "Project name", description: "Project description" },
+    { name: "Project name", description: "Project description" },
+    { name: "Project name", description: "Project description" },
+  ]
+
   return (
     <>
       <section className="min-h-[55vh] xl:min-h-[80vh] flex flex-col justify-between w-full bg-brand">
@@ -39,23 +47,33 @@ export default function Home() {
       </section>
 
       <section className="w-full">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4">
           {/* card */}
-          <div className="w-sm bg-red-300">
-            <div className="aspect-square w-full relative bg-stone">
-            </div>
-            <div className="w-full">
-              <div className="size-10 bg-stone"></div>
-              <div className="">
-                <span>Project name</span>
-                <p>Project description</p>
-              </div>
-            </div>
-          </div>
 
-          
+          {
+            cards.map((card, idx) => {
+              return (
+                <div key={idx} className="min-w-[80vw] sm:min-w-[50vw] lg:min-w-0  bg-white border-2">
+                  <div className="aspect-square w-full relative bg-stone">
+                  </div>
+                  <div className="w-full flex items-center justify-start gap-4 p-4">
+                    <div className="size-11 bg-stone"></div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-semibold">{card.name}</span>
+                      <p className="text-sm text-dark-grey">{card.description}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </section>
+
+      <section>
+
+      </section>
+
     </>
   );
 }
