@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Wrapper from "../components/Wrapper";
+import { services } from "../utils/data";
 
 export default function Home() {
 
@@ -83,8 +84,49 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full aspect-square lg:aspect-video bg-paper mt-8">
+          <div className="w-full aspect-square lg:aspect-video bg-paper mt-8 mb-12">
 
+          </div>
+        </Wrapper>
+      </section>
+
+      <section className="w-full py-4">
+        <Wrapper>
+          <div className="flex flex-col justify-between h-[30vh] md:h-[60vh]">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl leading-none font-bold">•</span>
+              <span className="font-medium">Services</span>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 ">
+              <ul className="flex flex-col">
+                {
+                  services.map((service, idx) => {
+                    return (
+                      <li key={idx} className="list-none lg:py-3">
+                        <span className="text-3xl lg:text-5xl">{service}
+                        </span>
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+              <div className="w-xs aspect-square hidden lg:block bg-red-300"></div>
+            </div>
+          </div>
+
+          <div className="h-[15vh]" />
+
+          <div className="w-full mt-8">
+            <div className="flex items-center justify-center gap-32">
+              {
+                [...Array(8)].map((_, idx) => {
+                  return (
+                    <div key={idx} className="size-12 bg-stone mb-4">
+                    </div>
+                  )
+                })
+              }
+            </div>
           </div>
         </Wrapper>
       </section>

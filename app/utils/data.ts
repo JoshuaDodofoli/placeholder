@@ -19,5 +19,11 @@ export const links = [
         name: "Pricing",
         path: "#pricing"
     },
+]
 
+export const services = [
+    "Photography",
+    "Branding",
+    "Illustration",
+    "App design",
 ]
