@@ -19,6 +19,7 @@
 
   --font-google: var(--font-google-sans);
   --font-space: var(--font-space-grotesk);
+  --font-mono: var(--font-dm-mono);
 
   --text-xs: 0.625rem; /* 10px */
   --text-sm: 0.813rem; /* 13px */
@@ -33,4 +34,13 @@
 
 body {
   @apply bg-paper font-google;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

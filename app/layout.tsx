@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk, Space_Mono, Google_Sans } from "next/font/google";
+import { Space_Grotesk,  Google_Sans, DM_Mono} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -20,6 +11,13 @@ const spaceGrotesk = Space_Grotesk({
 const googleSans = Google_Sans({
   variable: "--font-google-sans",
   subsets: ["latin"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  weight: "400",
+  subsets: ["latin"],
+
 });
 
 export const metadata: Metadata = {
@@ -35,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${googleSans.variable} antialiased`}
+        className={` ${spaceGrotesk.variable} ${googleSans.variable} ${dmMono.variable} antialiased`}
       >
         {children}
       </body>

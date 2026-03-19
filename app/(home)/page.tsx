@@ -1,14 +1,9 @@
 import Image from "next/image";
 import Wrapper from "../components/Wrapper";
+import { projects, services } from "../utils/data";
+import Card from "./(components)/Card";
 
 export default function Home() {
-
-  const cards = [
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-  ]
 
   return (
     <>
@@ -46,32 +41,76 @@ export default function Home() {
         </Wrapper>
       </section>
 
-      <section className="w-full">
-        <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4">
-          {/* card */}
-
+      <section className="w-full bg-black">
+        <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {
-            cards.map((card, idx) => {
+            projects.map((project, idx) => {
               return (
-                <div key={idx} className="min-w-[80vw] sm:min-w-[50vw] lg:min-w-0  bg-white border-2">
-                  <div className="aspect-square w-full relative bg-stone">
-                  </div>
-                  <div className="w-full flex items-center justify-start gap-4 p-4">
-                    <div className="size-11 bg-stone"></div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold">{card.name}</span>
-                      <p className="text-sm text-dark-grey">{card.description}</p>
-                    </div>
-                  </div>
-                </div>
+                <Card key={idx} {...project} />
               )
             })
           }
         </div>
       </section>
 
-      <section>
+      <section className="bg-black text-paper w-full py-4">
+        <Wrapper>
+          <div className="flex flex-col justify-between h-[50vh] md:h-[60vh]">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl leading-none font-bold">•</span>
+              <span className="font-medium">About Placeholder</span>
+            </div>
+            <div className="">
+              <p className="text-3xl lg:text-5xl lg:max-w-2xl">Placeholder space between thought and completion.</p>
+              <p className="text-sm text-stone/55 font-mono uppercase lg:max-w-xl font-bold mt-4"> We use AI generated images (slop) to explore,test and iterate on ideas. To build without overthinking and evolve without permission. <br />Placeholder gives your unfinished work a home.</p>
+            </div>
+          </div>
 
+          <div className="w-full aspect-square lg:aspect-video bg-paper mt-8 mb-12">
+
+          </div>
+        </Wrapper>
+      </section>
+
+      <section className="w-full py-4">
+        <Wrapper>
+          <div className="flex flex-col justify-between h-[30vh] md:h-[60vh]">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl leading-none font-bold">•</span>
+              <span className="font-medium">Services</span>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 ">
+              <ul className="flex flex-col">
+                {
+                  services.map((service, idx) => {
+                    return (
+                      <li key={idx} className="list-none lg:py-3">
+                        <span className="text-3xl lg:text-5xl">{service}
+                        </span>
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+              <div className="w-xs aspect-square hidden lg:block bg-red-300"></div>
+            </div>
+          </div>
+
+          <div className="h-[15vh]" />
+
+          <div className="w-full mt-8">
+            <div className="flex items-center justify-center gap-32">
+              {
+                [...Array(8)].map((_, idx) => {
+                  return (
+                    <div key={idx} className="size-12 bg-stone mb-4">
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+        </Wrapper>
       </section>
 
     </>

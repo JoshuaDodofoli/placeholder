@@ -23,7 +23,7 @@ const Navbar = () => {
                 </button>
 
                 {toggleMenu && (
-                    <ul className="flex flex-col items-end absolute right-4 top-14 gap-2">
+                    <ul className="flex flex-col items-end absolute right-4 top-14 gap-2 z-60">
                         {
                             links.map((link) => {
                                 return (
