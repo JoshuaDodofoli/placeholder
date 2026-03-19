@@ -15,17 +15,13 @@ export const links = [
     name: "Services",
     path: "#services",
   },
-  {
-    name: "Pricing",
-    path: "#pricing",
-  },
 ];
 
 export const services = [
   "Photography",
-  "Branding",
+  "Logo design",
   "Illustration",
-  "App design",
+  "Graphic design",
 ];
 
 export const projects = [
