@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Wrapper from "../components/Wrapper";
-import { services } from "../utils/data";
+import { projects, services } from "../utils/data";
+import Card from "./(components)/Card";
 
 export default function Home() {
-
-  const cards = [
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-    { name: "Project name", description: "Project description" },
-  ]
 
   return (
     <>
@@ -48,23 +42,11 @@ export default function Home() {
       </section>
 
       <section className="w-full bg-black">
-        <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4">
-          {/* card */}
-
+        <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {
-            cards.map((card, idx) => {
+            projects.map((project, idx) => {
               return (
-                <div key={idx} className="min-w-[80vw] sm:min-w-[50vw] lg:min-w-0  bg-white border-2">
-                  <div className="aspect-square w-full relative bg-stone">
-                  </div>
-                  <div className="w-full flex items-center justify-start gap-4 p-4">
-                    <div className="size-11 bg-stone"></div>
-                    <div className="flex flex-col">
-                      <span className="text-sm font-semibold">{card.name}</span>
-                      <p className="text-sm text-dark-grey">{card.description}</p>
-                    </div>
-                  </div>
-                </div>
+                <Card key={idx} {...project} />
               )
             })
           }
