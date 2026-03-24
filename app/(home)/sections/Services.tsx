@@ -2,6 +2,7 @@ import Wrapper from "@/app/components/Wrapper"
 import { projects, services } from "@/app/utils/data"
 import Image from "next/image"
 import BookCallButton from "../(components)/BookCallButton";
+import Tag from "@/app/components/Tag";
 
 const Services = () => {
 
@@ -11,10 +12,7 @@ const Services = () => {
         <section className="w-full py-4">
             <Wrapper>
                 <div className="flex flex-col justify-between h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[60vh]">
-                    <div className="flex items-center gap-3">
-                        <span className="text-2xl leading-none font-bold">•</span>
-                        <span className="font-medium text-sm">Services</span>
-                    </div>
+                  <Tag text="Services" />
                     <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 ">
                         <ul className="flex flex-col">
                             {
