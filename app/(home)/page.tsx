@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full aspect-square bg-paper mt-8 mb-12">
+          <div className="w-full aspect-square md:aspect-video bg-paper mt-8 mb-12">
 
           </div>
         </Wrapper>
