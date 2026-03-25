@@ -1,3 +1,5 @@
+import { Project } from "./interface";
+
 export const links = [
   {
     name: "Home",
@@ -35,13 +37,14 @@ export const services = [
   "Graphic design",
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     name: "Project 1",
     slug: "project-1",
     caption: "Project caption",
     desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
     service: "Photography",
+    tag: "Concept",
     images: [
       "/images/photography/img1.webp",
       "/images/photography/img2.webp",
@@ -56,6 +59,7 @@ export const projects = [
     caption: "Project caption",
     desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
     service: "Illustration",
+    tag: "Concept",
     images: [
       "/images/illustration/img1.webp",
       "/images/illustration/img2.webp",
@@ -70,6 +74,7 @@ export const projects = [
     caption: "Project caption",
     desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
     service: "Logo design",
+    tag: "Concept",
     images: [
       "/images/logo-design/img1.webp",
       "/images/logo-design/img2.webp",
@@ -84,6 +89,7 @@ export const projects = [
     caption: "Project caption",
     desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
     service: "Graphic design",
+    tag: "Concept",
     images: [
       "/images/graphic-design/img1.webp",
       "/images/graphic-design/img2.webp",

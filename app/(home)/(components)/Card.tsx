@@ -1,16 +1,10 @@
+import { Project } from "@/app/utils/interface";
 import Image from "next/image";
 import Link from "next/link";
 
-interface CardProps {
-  name?: string;
-  slug?: string;
-  caption?: string;
-  service?: string;
-  desc?: string;
-  images?: string[]
-}
+type CardProps = Partial<Project>;
 
-const Card = ({ name, slug, caption, service, desc, images }: CardProps) => {
+const Card = ({ name, slug, caption, images }: CardProps) => {
 
   return (
     <Link href={`/${slug}`}>

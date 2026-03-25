@@ -7,9 +7,9 @@ const Projects = () => {
         <section className="w-full bg-black">
             <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {
-                    projects.map((project, idx) => {
+                    projects.map((project) => {
                         return (
-                            <Card key={idx} {...project} />
+                            <Card key={project.slug} {...project} />
                         )
                     })
                 }
