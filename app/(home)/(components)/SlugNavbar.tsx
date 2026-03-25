@@ -1,5 +1,6 @@
 import Wrapper from "@/app/components/Wrapper";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SlugNavbarProps {
     cover: string;
@@ -20,7 +21,14 @@ const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
                         <p className="text-sm font-medium text-dark-grey/80">{caption}</p>
                     </div>
                 </div>
-                <div className="">Close</div>
+                <Link href={'/'}>
+                    <button className="bg-paper size-9 shadow-2xs relative cursor-pointer rounded-full flex items-center justify-center">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none">
+                            <line x1="1" y1="1" x2="19" y2="19" strokeWidth="2" strokeLinecap="round" className="stroke-dark-grey" />
+                            <line x1="19" y1="1" x2="1" y2="19" strokeWidth="2" strokeLinecap="round" className="stroke-dark-grey" />
+                        </svg>
+                    </button>
+                </Link>
             </Wrapper>
         </nav>
     )

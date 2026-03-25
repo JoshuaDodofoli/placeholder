@@ -7,7 +7,7 @@ type CardProps = Partial<Project>;
 const Card = ({ name, slug, caption, images }: CardProps) => {
 
   return (
-    <Link href={`/${slug}`}>
+    <Link href={`/${slug}`} scroll={false}>
       <div className="min-w-[80vw] sm:min-w-[50vw] lg:min-w-0 bg-white">
         <div className="aspect-square w-full relative bg-stone">
           {

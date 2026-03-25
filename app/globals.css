@@ -33,7 +33,7 @@
 }
 
 body {
-  @apply bg-paper font-google;
+  @apply bg-paper/70 font-google;
 }
 
 .scrollbar-hide {
