@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Wrapper from "../components/Wrapper";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
@@ -12,7 +11,7 @@ export default function Home() {
       <Hero />
 
       <Projects />
-
+  
       <section className="bg-black text-paper w-full py-4">
         <Wrapper>
           <div className="flex flex-col justify-between min-h-[35vh] xl:min-h-[60vh]">

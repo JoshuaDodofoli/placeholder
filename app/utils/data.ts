@@ -17,6 +17,17 @@ export const links = [
   },
 ];
 
+export const socials = [
+  {
+    name: "LinkedIn",
+    path: "#"
+  },
+  {
+    name: "X",
+    path: "#"
+  }
+]
+
 export const services = [
   "Photography",
   "Logo design",
