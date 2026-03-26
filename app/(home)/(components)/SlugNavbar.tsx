@@ -19,7 +19,7 @@ const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
                     <div className="">
                         <h6 className="font-medium text-base">{name}</h6>
                         <p className="text-sm font-medium text-dark-grey/80">{caption}</p>
-                    </div>
+                    </div>'
                 </div>
                 <Link href={'/'}>
                     <button className="bg-paper size-9 shadow-2xs relative cursor-pointer rounded-full flex items-center justify-center">

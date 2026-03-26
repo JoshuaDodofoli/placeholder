@@ -19,7 +19,7 @@ const page = async ({ params }: PageProps) => {
   return (
     <>
       <SlugNavbar cover={project?.images[0] ?? ""} name={project?.name ?? ""} caption={project?.caption ?? ""} />
-      <div className="mt-24">
+      <div className="pt-24">
         <Wrapper className="grid grid-cols-1 lg:grid-cols-[300px_1fr] xl:grid-cols-[450px_1fr] gap-8 items-start">
           <div className="sticky top-24 w-full hidden lg:block">
             <SideBar {...project} />

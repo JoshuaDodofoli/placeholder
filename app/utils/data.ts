@@ -22,13 +22,13 @@ export const links = [
 export const socials = [
   {
     name: "LinkedIn",
-    path: "#"
+    path: "#",
   },
   {
     name: "X",
-    path: "#"
-  }
-]
+    path: "#",
+  },
+];
 
 export const services = [
   "Photography",
@@ -39,10 +39,10 @@ export const services = [
 
 export const projects: Project[] = [
   {
-    name: "Project 1",
+    name: "Dusk & Grain",
     slug: "project-1",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Film photography editorial",
+    desc: "A visual exploration of golden hour light across urban and natural landscapes. Shot entirely on 35mm film, Dusk & Grain captures the quiet moments between dusk and dark — the kind of light that makes ordinary scenes feel cinematic.",
     service: "Photography",
     tag: "Concept",
     images: [
@@ -54,10 +54,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Project 2",
+    name: "Scrawl",
     slug: "project-2",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Doodle illustration series",
+    desc: "Scrawl is a collection of loose, hand-drawn doodles that live somewhere between journaling and art. Each piece starts with no plan — just a pen and whatever comes out. The result is a series that feels personal, unfiltered, and oddly satisfying to look at.",
     service: "Illustration",
     tag: "Concept",
     images: [
@@ -69,10 +69,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Project 3",
+    name: "Ova Studio",
     slug: "project-3",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Minimal identity design",
+    desc: "A brand identity for a fictional creative studio built around the idea of simplicity as a statement. The Ova mark is derived from a single continuous stroke — adaptable, memorable, and designed to work across any medium.",
     service: "Logo design",
     tag: "Concept",
     images: [
@@ -84,10 +84,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Project 4",
+    name: "Terrain",
     slug: "project-4",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Outdoor lifestyle brand",
+    desc: "Terrain is a graphic design concept for an outdoor lifestyle brand targeting minimalist adventurers. The visual system draws from topographic maps, raw textures, and muted earth tones to create a brand that feels grounded and intentional.",
     service: "Graphic design",
     tag: "Concept",
     images: [
