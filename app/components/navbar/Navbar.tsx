@@ -3,6 +3,8 @@ import { links } from "@/app/utils/data"
 import Link from "next/link"
 import { useState } from "react"
 import Wrapper from "../Wrapper"
+import { AnimatePresence, motion } from "motion/react"
+import { NavItemVariants, NavVariants } from "./Anime"
 
 const Navbar = () => {
 
@@ -22,20 +24,29 @@ const Navbar = () => {
                     </svg>
                 </button>
 
-                {toggleMenu && (
-                    <ul className="flex flex-col items-end absolute right-4 top-14 gap-2 z-60">
-                        {
-                            links.map((link) => {
-                                return (
-                                    <li key={link.name} className="bg-black text-base text-white px-3 py-1.5 rounded-full">
-                                        <Link href={link.path}>{link.name}</Link>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                )}
-            </Wrapper>  
+                <AnimatePresence>
+                    {toggleMenu && (
+                        <motion.ul
+                            variants={NavVariants}
+                            initial="close"
+                            animate="open"
+                            exit="close"
+                            className="flex flex-col items-end absolute right-4 top-14 gap-2 z-60">
+                            {
+                                links.map((link, idx) => {
+                                    return (
+                                        <motion.li
+                                            variants={NavItemVariants}
+                                            key={idx} className="bg-black text-base text-white px-3 py-1.5 rounded-full">
+                                            <Link href={link.path}>{link.name}</Link>
+                                        </motion.li>
+                                    )
+                                })
+                            }
+                        </motion.ul>
+                    )}
+                </AnimatePresence>
+            </Wrapper>
         </nav>
     )
 }
