@@ -1,4 +1,4 @@
-import { stagger } from "motion";
+import { scale, stagger } from "motion";
 
 export const NavVariants = {
   open: {
@@ -31,3 +31,13 @@ export const NavItemVariants = {
     },
   },
 };
+
+
+export const Buttonvariants = {
+  hover: {
+    scale: 1.1,
+  },
+  tap: {
+    scale: 0.9,
+  }
+}

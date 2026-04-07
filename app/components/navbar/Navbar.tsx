@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import Wrapper from "../Wrapper"
 import { AnimatePresence, motion } from "motion/react"
-import { NavItemVariants, NavVariants } from "./Anime"
+import { Buttonvariants, NavItemVariants, NavVariants } from "./Anime"
 
 const Navbar = () => {
 
@@ -17,12 +17,16 @@ const Navbar = () => {
     return (
         <nav className="fixed right-0 top-4 md:top-8">
             <Wrapper>
-                <button onClick={handleToggleMenu} className="bg-white size-11 shadow-2xs relative cursor-pointer rounded-full flex flex-col items-center justify-center">
+                <motion.button
+                    variants={Buttonvariants}
+                    whileHover="hover"
+                    whileTap="tap"
+                    onClick={handleToggleMenu} className="bg-white size-11 shadow-2xs relative cursor-pointer rounded-full flex flex-col items-center justify-center">
                     <svg width="20" height="11" viewBox="0 0 20 12" fill="none">
                         <line x1="0" y1="1" x2="20" y2="1" stroke="black" strokeWidth="2" strokeLinecap="round" />
                         <line x1="0" y1="8" x2="20" y2="8" stroke="black" strokeWidth="2" strokeLinecap="round" />
                     </svg>
-                </button>
+                </motion.button>
 
                 <AnimatePresence>
                     {toggleMenu && (
@@ -37,7 +41,11 @@ const Navbar = () => {
                                     return (
                                         <motion.li
                                             variants={NavItemVariants}
-                                            key={idx} className="bg-black text-base text-white px-3 py-1.5 rounded-full">
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            key={idx}
+                                            className="bg-black text-base text-white px-3 py-1.5 rounded-full"
+                                        >
                                             <Link href={link.path}>{link.name}</Link>
                                         </motion.li>
                                     )
