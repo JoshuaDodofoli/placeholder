@@ -1,5 +1,6 @@
-import Wrapper from "../components/Wrapper";
+import { AnimatePresence } from "motion/react";
 import { projects } from "../utils/data";
+import SlugClient from "./(components)/SlugClient";
 
 interface PageProps {
   params: Promise<{
@@ -13,13 +14,12 @@ const page = async ({ params }: PageProps) => {
 
   const project = projects.find((project) => project.slug === slug);
 
+  if (!project) {
+    return <div className="font-sans text-3xl">Project not found</div>;
+  }
+
   return (
-    <div>
-      <Wrapper>
-        <h1>{project?.name}</h1>
-        <p>{project?.desc}</p>
-      </Wrapper>
-    </div>
+      <SlugClient project={project} />
   )
 }
 

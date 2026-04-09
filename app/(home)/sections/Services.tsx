@@ -19,7 +19,7 @@ const Services = () => {
                                 services.map((service, idx) => {
                                     return (
                                         <li key={idx} className="list-none md:py-1 lg:py-2">
-                                            <span className="text-3xl md:text-4xl xl:text-5xl">{service}
+                                            <span className="text-3xl md:text-4xl xl:text-5xl font-medium">{service}
                                             </span>
                                         </li>
                                     )

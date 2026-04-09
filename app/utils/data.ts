@@ -1,3 +1,5 @@
+import { Project } from "./interface";
+
 export const links = [
   {
     name: "Home",
@@ -17,6 +19,17 @@ export const links = [
   },
 ];
 
+export const socials = [
+  {
+    name: "LinkedIn",
+    path: "#",
+  },
+  {
+    name: "X",
+    path: "#",
+  },
+];
+
 export const services = [
   "Photography",
   "Logo design",
@@ -24,13 +37,14 @@ export const services = [
   "Graphic design",
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
-    name: "Project 1",
+    name: "Dusk & Grain",
     slug: "project-1",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Film photography editorial",
+    desc: "A visual exploration of golden hour light across urban and natural landscapes. Shot entirely on 35mm film, Dusk & Grain captures the quiet moments between dusk and dark — the kind of light that makes ordinary scenes feel cinematic.",
     service: "Photography",
+    tag: "Concept",
     images: [
       "/images/photography/img1.webp",
       "/images/photography/img2.webp",
@@ -40,11 +54,12 @@ export const projects = [
     ],
   },
   {
-    name: "Project 2",
+    name: "Scrawl",
     slug: "project-2",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Doodle illustration series",
+    desc: "Scrawl is a collection of loose, hand-drawn doodles that live somewhere between journaling and art. Each piece starts with no plan — just a pen and whatever comes out. The result is a series that feels personal, unfiltered, and oddly satisfying to look at.",
     service: "Illustration",
+    tag: "Concept",
     images: [
       "/images/illustration/img1.webp",
       "/images/illustration/img2.webp",
@@ -54,11 +69,12 @@ export const projects = [
     ],
   },
   {
-    name: "Project 3",
+    name: "Ova Studio",
     slug: "project-3",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Minimal identity design",
+    desc: "A brand identity for a fictional creative studio built around the idea of simplicity as a statement. The Ova mark is derived from a single continuous stroke — adaptable, memorable, and designed to work across any medium.",
     service: "Logo design",
+    tag: "Concept",
     images: [
       "/images/logo-design/img1.webp",
       "/images/logo-design/img2.webp",
@@ -68,11 +84,12 @@ export const projects = [
     ],
   },
   {
-    name: "Project 4",
+    name: "Terrain",
     slug: "project-4",
-    caption: "Project caption",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.",
+    caption: "Outdoor lifestyle brand",
+    desc: "Terrain is a graphic design concept for an outdoor lifestyle brand targeting minimalist adventurers. The visual system draws from topographic maps, raw textures, and muted earth tones to create a brand that feels grounded and intentional.",
     service: "Graphic design",
+    tag: "Concept",
     images: [
       "/images/graphic-design/img1.webp",
       "/images/graphic-design/img2.webp",

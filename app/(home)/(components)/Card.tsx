@@ -1,19 +1,13 @@
+import { Project } from "@/app/utils/interface";
 import Image from "next/image";
 import Link from "next/link";
 
-interface CardProps {
-  name?: string;
-  slug?: string;
-  caption?: string;
-  service?: string;
-  desc?: string;
-  images?: string[]
-}
+type CardProps = Partial<Project>;
 
-const Card = ({ name, slug, caption, service, desc, images }: CardProps) => {
+const Card = ({ name, slug, caption, images }: CardProps) => {
 
   return (
-    <Link href={`/${slug}`}>
+    <Link href={`/${slug}`} scroll={false}>
       <div className="min-w-[80vw] sm:min-w-[50vw] lg:min-w-0 bg-white">
         <div className="aspect-square w-full relative bg-stone">
           {
