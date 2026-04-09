@@ -1,4 +1,4 @@
-import { scale, stagger } from "motion";
+import { stagger } from "motion";
 
 export const NavVariants = {
   open: {

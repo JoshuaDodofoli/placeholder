@@ -44,6 +44,7 @@ const Navbar = () => {
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
                                             key={idx}
+                                            onClick={handleToggleMenu}
                                             className="bg-black text-base text-white px-3 py-1.5 rounded-full"
                                         >
                                             <Link href={link.path}>{link.name}</Link>
