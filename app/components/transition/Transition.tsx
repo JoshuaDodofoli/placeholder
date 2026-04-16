@@ -12,7 +12,7 @@ const Transition = ({ children }: { children: React.ReactNode }) => {
                 if (!el) return next()
                 animate(el, 
                     { opacity: [1, 0], y: ["0%", "10px"] }, 
-                    { duration: 0.3, ease: "easeIn" }
+                    { duration: 0.2, ease: "easeIn" }
                  ).then(next)
             }}
             enter={(next) => {

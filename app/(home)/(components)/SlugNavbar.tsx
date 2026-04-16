@@ -27,10 +27,10 @@ const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
                 </div>
                 <Link href={'/'}>
                     <motion.button
-                    variants={Buttonvariants}
-                    whileHover="hover"
-                    whileTap="tap"
-                    className="bg-paper size-9 shadow-2xs relative cursor-pointer rounded-full flex items-center justify-center">
+                        variants={Buttonvariants}
+                        whileHover="hover"
+                        whileTap="tap"
+                        className="bg-paper size-9 shadow-2xs relative cursor-pointer rounded-full flex items-center justify-center">
                         <svg width="15" height="15" viewBox="0 0 20 20" fill="none">
                             <line x1="1" y1="1" x2="19" y2="19" strokeWidth="2" strokeLinecap="round" className="stroke-dark-grey" />
                             <line x1="19" y1="1" x2="1" y2="19" strokeWidth="2" strokeLinecap="round" className="stroke-dark-grey" />
