@@ -1,20 +1,25 @@
-export const SlugVariants = {
-  // open: {
-  //   y: "0%",
-  //   opacity: 1,
-  //   transition: {
-  //     duration: 0.5,
-  //     type: "spring" as const,
-  //     bounce: 0.15,
-  //   },
-  // },
-  // close: {
-  //   y: "50%",
-  //   opacity: 0,
-  //   transition: {
-  //     duration: 0.5,
-  //     type: "spring" as const,
-  //     bounce: 0.15,
-  //   },
-  // },
-};
+export const slugContainer = {
+    initial: {},
+    animate: {
+        transition: {
+            staggerChildren: 0.05,
+            delayChildren: 0.2
+        }
+    }
+}
+
+export const slugItem = {
+    initial: {
+        opacity: 0,
+        y: 20
+    },      
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            type: "spring" as const,
+            bounce: 0.25,
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Space_Grotesk,  Google_Sans, DM_Mono} from "next/font/google";
+import { Space_Grotesk, Google_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
+import Transition from "./components/transition/Transition";
 
 
 const spaceGrotesk = Space_Grotesk({
@@ -35,7 +36,9 @@ export default function RootLayout({
       <body
         className={` ${spaceGrotesk.variable} ${googleSans.variable} ${dmMono.variable} antialiased`}
       >
-        {children}
+        <Transition>
+          {children}
+        </Transition>
       </body>
     </html>
   );

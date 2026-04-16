@@ -12,6 +12,8 @@
     "classnames": "^2.5.1",
     "motion": "^12.38.0",
     "next": "16.1.6",
+    "next-transition-router": "^0.2.11",
+    "next-view-transitions": "^0.3.5",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

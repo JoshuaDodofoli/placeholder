@@ -4,6 +4,7 @@ import Wrapper from "@/app/components/Wrapper";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { slugItem } from "@/app/[slug]/(components)/Anime";
 
 interface SlugNavbarProps {
     cover: string;
@@ -13,7 +14,7 @@ interface SlugNavbarProps {
 
 const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
     return (
-        <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-xs py-4">
+        <motion.nav variants={slugItem} className="fixed top-0 left-0 w-full bg-white z-50 shadow-xs py-4">
             <Wrapper className="flex items-center justify-between">
                 <div className="flex gap-3 items-center">
                     <div className="relative size-12">
@@ -22,7 +23,7 @@ const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
                     <div className="">
                         <h6 className="font-medium text-base">{name}</h6>
                         <p className="text-sm font-medium text-dark-grey/80">{caption}</p>
-                    </div>'
+                    </div>
                 </div>
                 <Link href={'/'}>
                     <motion.button
@@ -37,7 +38,7 @@ const SlugNavbar = ({ cover, name, caption }: SlugNavbarProps) => {
                     </motion.button>
                 </Link>
             </Wrapper>
-        </nav>
+        </motion.nav>
     )
 }
 
