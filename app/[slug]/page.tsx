@@ -19,7 +19,7 @@ const page = async ({ params }: PageProps) => {
   }
 
   return (
-      <SlugClient project={project} />
+      <SlugClient key={project.slug} project={project} />
   )
 }
 
