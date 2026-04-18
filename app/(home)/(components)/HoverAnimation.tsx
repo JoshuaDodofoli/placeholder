@@ -88,8 +88,15 @@ const HoverAnimation = () => {
                     <span key={i} style={lineStyle} className="w-px h-2 bg-paper shrink-0" />
                 ))}
             </div>
-            <div>
-                Blobs
+            <div className="flex items-center justify-around w-full">
+               {
+                Array.from({ length: 3 }).map((_, i) => {
+                    return (
+                        <motion.div
+                        key={i} className="size-20 cursor-pointer bg-paper rounded-full" />
+                    )
+                })
+               }
             </div>
             <div ref={rowRef2} className="w-full flex items-end gap-4">
                 {Array.from({ length: lineCount }).map((_, i) => (
