@@ -15,7 +15,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="fixed right-0 top-4 md:top-8">
+        <nav className="fixed right-0 top-4 md:top-8 z-50">
             <Wrapper>
                 <motion.button
                     variants={Buttonvariants}
