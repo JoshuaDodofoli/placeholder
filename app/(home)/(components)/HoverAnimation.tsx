@@ -121,7 +121,7 @@ const HoverAnimation = () => {
 
             <div className="flex ml-48 lg:ml-0 lg:flex-row max-lg:flex-col items-center justify-around lg:w-full max-lg:h-full gap-6 lg:gap-0">
                 {Array.from({ length: 4 }).map((_, i) => (
-                    <Blob key={i} className="size-12 lg:size-20" />
+                    <Blob key={i} className="size-12 lg:size-15 bg-paper" />
                 ))}
             </div>
 
