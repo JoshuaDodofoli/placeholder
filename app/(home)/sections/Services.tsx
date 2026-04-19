@@ -70,15 +70,15 @@ const Services = () => {
                         <motion.div
                             animate={{ rotate: 90 }}
                             transition={{ duration: 1.2, repeat: Infinity }}
-                            className="size-18 bg-paper rounded-xl flex items-center justify-center">
+                            className="size-14 bg-paper rounded-xl flex items-center justify-center">
                             <motion.div
-                                animate={{ scaleY: [1, 0] }}
+                                animate={{ scaleY: [1, 0, 1] }}
                                 transition={{
-                                    duration: 1.2,
+                                    duration: 2.4,
                                     repeat: Infinity,
                                     ease: "easeInOut",
                                 }}
-                                className="bg-black size-12 origin-top"
+                                className="bg-black size-8 origin-top"
                             />
                         </motion.div>
                     </div>
