@@ -18,13 +18,13 @@ const Services = () => {
             <Wrapper>
                 <div className="flex flex-col justify-between h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[60vh]">
                     <Tag text="Services" />
-                    <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 ">
+                    <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 mt-4 lg:mt-16">
                         <ul className="flex flex-col">
                             {
                                 services.map((service, idx) => {
                                     return (
                                         <motion.li
-                                            key={idx} 
+                                            key={idx}
                                             onMouseEnter={() => setIsHovered(idx)}
                                             className="group relative list-none md:py-1 lg:py-2 cursor-pointer w-fit px-2 -mx-2"
                                         >
@@ -50,24 +50,6 @@ const Services = () => {
 
                 <div className="h-[10vh] md:h-[25vh]" />
 
-                {/* <div className="w-full mt-8">
-                    <div className="flex items-center justify-between gap-32">
-                        {
-                            [...projectImg].map((_, idx) => {
-                                return (
-                                    <div key={idx} className="size-12 relative bg-stone mb-4">
-                                        <Image
-                                            src={projectImg[idx] ?? "./photography/img3.webp"}
-                                            fill
-                                            alt="project image"
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div> */}
-
                 <div className="grid min-h-[50vh] xl:min-h-[70vh] grid-cols-1 md:grid-cols-[300px_1fr] xl:grid-cols-[450px_1fr] w-full gap-4">
                     <div className="bg-dark-grey/5 rounded-2xl p-4 flex flex-col justify-between aspect-square md:aspect-auto">
                         <div className="">
@@ -84,7 +66,22 @@ const Services = () => {
                             <BookCallButton />
                         </div>
                     </div>
-                    <div className="bg-black rounded-2xl aspect-square md:aspect-auto"></div>
+                    <div className="bg-black rounded-2xl flex items-center justify-center aspect-square md:aspect-auto">
+                        <motion.div
+                            animate={{ rotate: 90 }}
+                            transition={{ duration: 1.2, repeat: Infinity }}
+                            className="size-18 bg-paper rounded-xl flex items-center justify-center">
+                            <motion.div
+                                animate={{ scaleY: [1, 0] }}
+                                transition={{
+                                    duration: 1.2,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                }}
+                                className="bg-black size-12 origin-top"
+                            />
+                        </motion.div>
+                    </div>
                 </div>
             </Wrapper>
         </section>
