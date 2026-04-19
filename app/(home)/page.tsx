@@ -17,9 +17,9 @@ export default function Home() {
         <Wrapper>
           <Tag text="About placeholder" />
           <div className="flex justify-between items-center min-h-[55vh] lg:min-h-[90vh]">
-            <div className="grid grid-cols-1 md:grid-cols-2 min-h-96 lg:min-h-140 w-full mt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-96 lg:min-h-140 w-full mt-12">
               <div className="flex flex-col w-full justify-between h-full gap-4 order-1">
-               <p className="text-3xl xl:text-5xl">Placeholder space between thought and completion.</p>
+               <p className="text-3xl xl:text-5xl max-w-lg">Placeholder space between thought and completion.</p>
                <p className="text-sm font-mono uppercase max-w-md"> We use AI generated images (slop) to explore,test and iterate on ideas. To build without overthinking and evolve without permission. <br />Placeholder gives your unfinished work a home.</p>
               </div>
               <div className="w-full h-full lg:order-last">

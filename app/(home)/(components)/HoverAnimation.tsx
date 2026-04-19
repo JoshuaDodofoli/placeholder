@@ -7,7 +7,7 @@ const LINE_SIZE = 1;
 const GAP_SIZE  = 16;
 const BASE_H    = 8;   // h-2 = 8px
 const MAX_H     = 24;  // 2x the base height
-const RADIUS    = 100; // px — how far the effect spreads from the cursor
+const RADIUS    = 70; // px — how far the effect spreads from the cursor
 
 const localX = motionValue(0);
 const localY = motionValue(0);
@@ -17,6 +17,11 @@ const HoverAnimation = () => {
     const rowRef       = useRef<HTMLDivElement>(null);
     const rowRef2      = useRef<HTMLDivElement>(null);
     const [lineCount, setLineCount] = useState(0);
+    const [pulseKeys, setPulseKeys] = useState<number[]>([0, 0, 0]);
+
+    const handleBlobClick = (index: number) => {
+        setPulseKeys(prev => prev.map((k, i) => i === index ? k + 1 : k));
+    };
 
     const animateLines = (mouseX: number, rowEl: HTMLDivElement | null) => {
         const spans = rowEl?.querySelectorAll("span");
@@ -74,6 +79,31 @@ const HoverAnimation = () => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        const id = "blob-pulse-style";
+        if (document.getElementById(id)) return;
+        const style = document.createElement("style");
+        style.id = id;
+        style.textContent = `
+            @keyframes blobRing {
+                0%   { transform: scale(1);   opacity: 0.55; }
+                100% { transform: scale(2); opacity: 0; }
+            }
+            .blob-ring {
+                position: absolute;
+                inset: 0;
+                border-radius: 9999px;
+                background: currentColor;
+                animation: blobRing 0.85s cubic-bezier(0.2, 0.6, 0.4, 1) forwards;
+                pointer-events: none;
+            }
+            .blob-ring-2 {
+                animation-delay: 0.18s;
+            }
+        `;
+        document.head.appendChild(style);
+    }, []);
+
     const lineStyle = { transition: "height 0.12s ease, opacity 0.12s ease" };
 
     return (
@@ -93,7 +123,19 @@ const HoverAnimation = () => {
                 Array.from({ length: 3 }).map((_, i) => {
                     return (
                         <motion.div
-                        key={i} className="size-20 cursor-pointer bg-paper rounded-full" />
+                        key={i}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => handleBlobClick(i)}
+                        className="relative size-20 cursor-pointer bg-paper rounded-full text-paper"
+                        >
+                            {pulseKeys[i] > 0 && (
+                                <>
+                                    <span key={pulseKeys[i]}       className="blob-ring" />
+                                    <span key={pulseKeys[i] + 0.5} className="blob-ring blob-ring-2" />
+                                </>
+                            )}
+                        </motion.div>
                     )
                 })
                }
