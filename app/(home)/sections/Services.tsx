@@ -5,13 +5,16 @@ import Image from "next/image"
 import BookCallButton from "../(components)/BookCallButton";
 import Tag from "@/app/components/Tag";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const Services = () => {
 
     const projectImg = projects.map((project) => project.images[0]);
 
+    const [isHovered, setIsHovered] = useState<number>(0);
+
     return (
-        <section className="w-full py-4">
+        <section className="w-full py-4 ">
             <Wrapper>
                 <div className="flex flex-col justify-between h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[60vh]">
                     <Tag text="Services" />
@@ -22,6 +25,7 @@ const Services = () => {
                                     return (
                                         <motion.li
                                             key={idx} 
+                                            onMouseEnter={() => setIsHovered(idx)}
                                             className="group relative list-none md:py-1 lg:py-2 cursor-pointer w-fit px-2 -mx-2"
                                         >
                                             <span className="relative z-10 text-3xl md:text-4xl xl:text-5xl text-black group-hover:text-paper font-medium transition-colors duration-300">
@@ -33,7 +37,14 @@ const Services = () => {
                                 })
                             }
                         </ul>
-                        <div className="w-lg aspect-video hidden xl:block bg-red-300"></div>
+                        <div className="w-2xl aspect-video relative hidden xl:block bg-red-300">
+                            <Image
+                                src={projectImg[isHovered] ?? ""}
+                                alt=""
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
 

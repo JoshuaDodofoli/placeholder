@@ -25,20 +25,22 @@ const Footer = () => {
               )
             })}
           </ul>
-            <ul>
-              <span className="text-xs font-medium uppercase">Socials</span>
-              {socials.map((social, idx) => {
-                return (
-                  <li key={idx} className="list-none">
-                    <Link href={social.path}>{social.name}</Link>
-                  </li>
-                )
-              })}
-            </ul>
+          <ul>
+            <span className="text-xs font-medium uppercase">Socials</span>
+            {socials.map((social, idx) => {
+              return (
+                <li key={idx} className="list-none">
+                  <Link href={social.path}>{social.name}</Link>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </Wrapper>
 
-      <div className="w-full min-h-[40vh] bg-stone"></div>
+      <div className="w-full min-h-[40vh] bg-stone flex items-center justify-center overflow-hidden">
+    
+      </div>
     </footer>
   )
 }
