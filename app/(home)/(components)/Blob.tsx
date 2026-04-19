@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, stagger } from "motion/react";
 import { useState } from "react";
 
 export const Blob = ({ className }: { className?: string }) => {
@@ -28,6 +28,8 @@ export const Blob = ({ className }: { className?: string }) => {
                 `
             }} />
             <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setPulseKey((p) => p + 1)}
