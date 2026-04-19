@@ -1,8 +1,10 @@
+'use client'
 import Wrapper from "@/app/components/Wrapper"
 import { projects, services } from "@/app/utils/data"
 import Image from "next/image"
 import BookCallButton from "../(components)/BookCallButton";
 import Tag from "@/app/components/Tag";
+import { motion } from "motion/react";
 
 const Services = () => {
 
@@ -12,16 +14,21 @@ const Services = () => {
         <section className="w-full py-4">
             <Wrapper>
                 <div className="flex flex-col justify-between h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[60vh]">
-                  <Tag text="Services" />
+                    <Tag text="Services" />
                     <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] items-center py-8 ">
                         <ul className="flex flex-col">
                             {
                                 services.map((service, idx) => {
                                     return (
-                                        <li key={idx} className="list-none md:py-1 lg:py-2">
-                                            <span className="text-3xl md:text-4xl xl:text-5xl font-medium">{service}
+                                        <motion.li
+                                            key={idx} 
+                                            className="group relative list-none md:py-1 lg:py-2 cursor-pointer w-fit px-2 -mx-2"
+                                        >
+                                            <span className="relative z-10 text-3xl md:text-4xl xl:text-5xl text-black group-hover:text-paper font-medium transition-colors duration-300">
+                                                {service}
                                             </span>
-                                        </li>
+                                            <div className="absolute inset-0 bg-black origin-bottom scale-y-0 transition-transform duration-300 ease-out group-hover:scale-y-100 z-0 pointer-events-none"></div>
+                                        </motion.li>
                                     )
                                 })
                             }
@@ -52,16 +59,16 @@ const Services = () => {
 
                 <div className="grid min-h-[50vh] xl:min-h-[70vh] grid-cols-1 md:grid-cols-[300px_1fr] xl:grid-cols-[450px_1fr] w-full gap-4">
                     <div className="bg-dark-grey/5 rounded-2xl p-4 flex flex-col justify-between aspect-square md:aspect-auto">
-                    <div className="">
-                        <div className="flex items-start justify-between">
-                            <div className="size-12 bg-pink-400"></div>
-                            <span className="bg-dark-grey/20 flex items-center justify-center text-xs rounded-sm px-1.5 uppercase font-medium py-px">Get in touch</span>
+                        <div className="">
+                            <div className="flex items-start justify-between">
+                                <div className="size-12 bg-pink-400"></div>
+                                <span className="bg-dark-grey/20 flex items-center justify-center text-xs rounded-sm px-1.5 uppercase font-medium py-px">Get in touch</span>
+                            </div>
+                            <div className="space-y-1 mt-4">
+                                <h6 className="text-2xl font-medium">Looking for something else?</h6>
+                                <p className="text-base">Interested in working together? <br />Let's talk about it.</p>
+                            </div>
                         </div>
-                        <div className="space-y-1 mt-4">
-                            <h6 className="text-2xl font-medium">Looking for something else?</h6>
-                            <p className="text-base">Interested in working together? <br />Let's talk about it.</p>
-                        </div>
-                    </div>
                         <div className="">
                             <BookCallButton />
                         </div>
