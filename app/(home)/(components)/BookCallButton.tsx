@@ -1,5 +1,6 @@
 'use client'
 import Modal from "@/app/components/Modal";
+import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const BookCallButton = () => {
@@ -24,9 +25,11 @@ const BookCallButton = () => {
                 </div>
             </div>
 
-            {isOpen && (
-                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
-            )}
+            <AnimatePresence>
+                {isOpen && (
+                    <Modal onClose={() => setIsOpen(false)} />
+                )}
+            </AnimatePresence>
         </>
     );
 };
