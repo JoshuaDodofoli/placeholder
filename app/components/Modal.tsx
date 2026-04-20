@@ -19,8 +19,8 @@ const Modal = ({ onClose }: ModalProps) => {
             animate={{ opacity: 1, scale: 1, transition: { duration: 0.3, delay: 0.3, type: "spring", bounce: 0.35 } }}
             initial={{ opacity: 0, scale: 0.8 }}
             exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.3 } }}
-            className="bg-paper w-xs aspect-video p-4 rounded-lg">
-                <div className="flex items-center justify-end">
+            className="bg-paper w-xs aspect-video p-4 rounded-lg relative">
+                <div className="absolute top-2 right-2 flex items-center justify-end">
                     <motion.button
                         onClick={onClose}
                         variants={Buttonvariants}
