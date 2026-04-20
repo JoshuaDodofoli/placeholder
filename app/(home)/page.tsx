@@ -13,7 +13,7 @@ export default function Home() {
 
       <Projects />
 
-      <section className="bg-black text-paper w-full py-4">
+      <section id="about" className="bg-black text-paper w-full py-4">
         <Wrapper>
           <Tag text="About placeholder" />
           <div className="flex justify-between items-center min-h-[50vh] xl:min-h-[90vh] py-4">

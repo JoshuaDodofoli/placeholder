@@ -10,7 +10,9 @@ const BookCallButton = () => {
         <>
             <div onClick={() => setIsOpen(true)} className="flex items-center justify-between gap-3 cursor-pointer bg-white p-2">
                 <div className="flex items-center mr-8 gap-3">
-                    <div className="size-17 bg-pink-400"></div>
+                    <div className="size-15 rounded-lg bg-black flex items-center justify-center">
+                        <div className="size-8 bg-paper rounded-lg" />
+                    </div>
                     <div className="flex flex-col">
                         <span className="text-sm text-dark-grey">Project discovery</span>
                         <p className="text-sm font-medium">Book a call</p>

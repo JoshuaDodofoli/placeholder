@@ -3,7 +3,7 @@ import BookCallButton from '../(components)/BookCallButton'
 
 const Hero = () => {
   return (
-    <section className="min-h-[50vh] xl:min-h-[80vh] flex flex-col justify-between w-full">
+    <section id="home" className="min-h-[50vh] xl:min-h-[80vh] flex flex-col justify-between w-full">
       <div className="mt-4 md:top-8">
         <Wrapper>
           <span className="text-3xl font-space lg:text-5xl tracking-tight font-bold flex items-center justify-start w-full">

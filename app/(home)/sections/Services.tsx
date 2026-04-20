@@ -14,7 +14,7 @@ const Services = () => {
     const [isHovered, setIsHovered] = useState<number>(0);
 
     return (
-        <section className="w-full py-4 ">
+        <section id="services" className="w-full py-4 ">
             <Wrapper>
                 <div className="flex flex-col justify-between h-[30vh] md:h-[20vh] lg:h-[40vh] xl:h-[60vh]">
                     <Tag text="Services" />
@@ -54,7 +54,9 @@ const Services = () => {
                     <div className="bg-dark-grey/5 rounded-2xl p-4 flex flex-col justify-between aspect-square md:aspect-auto">
                         <div className="">
                             <div className="flex items-start justify-between">
-                                <div className="size-12 bg-pink-400"></div>
+                                <div className="size-10 rounded-lg bg-black flex items-center justify-center">
+                                    <div className="size-6 bg-paper rounded-lg" />
+                                </div>
                                 <span className="bg-dark-grey/20 flex items-center justify-center text-xs rounded-sm px-1.5 uppercase font-medium py-px">Get in touch</span>
                             </div>
                             <div className="space-y-1 mt-4">

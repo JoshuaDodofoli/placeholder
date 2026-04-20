@@ -34,7 +34,7 @@ const Modal = ({ onClose }: ModalProps) => {
                     </motion.button>
                 </div>
                 <div className="flex items-center justify-center h-full">
-                    <p className="text-dark-grey text-lg">This project is just a concenpt.</p>
+                    <p className="text-dark-grey text-lg">This project is just a concept.</p>
                 </div>
             </motion.div>
         </motion.div>
