@@ -1,6 +1,5 @@
 'use client'
 import { links } from "@/app/utils/data"
-import Link from "next/link"
 import { useState } from "react"
 import Wrapper from "../Wrapper"
 import { AnimatePresence, motion } from "motion/react"
@@ -12,6 +11,18 @@ const Navbar = () => {
 
     const handleToggleMenu = () => {
         setToggleMenu(prev => !prev);
+    }
+
+    const handleNavClick = (path: string) => {
+        if (path === "#") return;
+        
+        const elementId = path.replace("#", "");
+        const element = document.getElementById(elementId);
+        
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+        setToggleMenu(false);
     }
 
     return (
@@ -44,10 +55,10 @@ const Navbar = () => {
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
                                             key={idx}
-                                            onClick={handleToggleMenu}
-                                            className="bg-black text-base text-white px-3 py-1.5 rounded-full"
+                                            onClick={() => handleNavClick(link.path)}
+                                            className="bg-black text-base text-white px-3 py-1.5 rounded-full cursor-pointer"
                                         >
-                                            <Link href={link.path}>{link.name}</Link>
+                                            {link.name}
                                         </motion.li>
                                     )
                                 })

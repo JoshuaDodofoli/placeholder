@@ -14,7 +14,7 @@ const Footer = () => {
 
       <Wrapper className="my-4 md:my-16">
         <div className="flex flex-col md:flex-row justify-between w-full py-8 gap-8">
-          <p className="max-w-xs lg:max-w-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, aspernatur.</p>
+          <p className="max-w-xs lg:max-w-sm">Placeholder gives your unfinished work a home.</p>
           <ul>
             <span className="text-xs font-medium uppercase">Navigation</span>
             {links.map((link, idx) => {
@@ -38,9 +38,9 @@ const Footer = () => {
         </div>
       </Wrapper>
 
-      <div className="w-full min-h-[40vh] bg-stone flex items-center justify-center overflow-hidden">
-    
-      </div>
+      {/* <div className="w-full min-h-[40vh] bg-stone flex items-center justify-center overflow-hidden">
+
+      </div> */}
     </footer>
   )
 }

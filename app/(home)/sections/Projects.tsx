@@ -4,7 +4,7 @@ import { projects } from '@/app/utils/data'
 
 const Projects = () => {
     return (
-        <section className="w-full bg-black">
+        <section id="works" className="w-full bg-black">
             <div className="w-full flex overflow-x-auto lg:grid lg:grid-cols-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {
                     projects.map((project) => {
