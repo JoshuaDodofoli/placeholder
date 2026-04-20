@@ -3,7 +3,7 @@ import { Project } from "./interface";
 export const links = [
   {
     name: "Home",
-    path: "#",
+    path: "#home",
   },
   {
     name: "Works",

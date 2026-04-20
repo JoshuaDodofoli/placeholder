@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Google_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Transition from "./components/transition/Transition";
+import LenisProvider from "./components/LenisProvider";
 
 
 const spaceGrotesk = Space_Grotesk({
@@ -32,13 +33,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         className={` ${spaceGrotesk.variable} ${googleSans.variable} ${dmMono.variable} antialiased`}
       >
-        <Transition>
-          {children}
-        </Transition>
+        <LenisProvider>
+          <Transition>
+            {children}
+          </Transition>
+        </LenisProvider>
       </body>
     </html>
   );
