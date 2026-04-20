@@ -1,5 +1,4 @@
 import { Project } from "@/app/utils/interface";
-import Image from "next/image";
 import Link from "next/link";
 
 type CardProps = Partial<Project>;
@@ -12,7 +11,7 @@ const Card = ({ name, slug, caption, images }: CardProps) => {
         <div className="aspect-square w-full relative bg-stone">
           {
             images && images.length > 0 && (
-              <Image src={images[0] ?? ""} alt={name ?? ""} fill className="object-cover" />
+              <img src={images[0] ?? ""} alt={name ?? ""} className="w-full h-full object-cover" />
             )
           }
         </div>
@@ -20,7 +19,7 @@ const Card = ({ name, slug, caption, images }: CardProps) => {
           <div className="size-12 bg-stone relative">
             {
               images && images.length > 0 && (
-                <Image src={images[1] ?? ""} alt={name ?? ""} fill className="object-cover" />
+                <img src={images[1] ?? ""} alt={name ?? ""} className="w-full h-full object-cover" />
               )
             }
           </div>

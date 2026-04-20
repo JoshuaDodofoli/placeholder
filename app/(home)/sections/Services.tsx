@@ -1,7 +1,6 @@
 'use client'
 import Wrapper from "@/app/components/Wrapper"
 import { projects, services } from "@/app/utils/data"
-import Image from "next/image"
 import BookCallButton from "../(components)/BookCallButton";
 import Tag from "@/app/components/Tag";
 import { motion } from "motion/react";
@@ -38,11 +37,10 @@ const Services = () => {
                             }
                         </ul>
                         <div className="w-2xl aspect-video relative hidden xl:block bg-red-300">
-                            <Image
+                            <img
                                 src={projectImg[isHovered] ?? ""}
                                 alt=""
-                                fill
-                                className="object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     </div>
