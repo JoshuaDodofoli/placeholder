@@ -9,7 +9,10 @@ import { useState } from "react";
 
 const Services = () => {
 
-    const projectImg = projects.map((project) => project.images[0]);
+    const projectImg = services.map((service) => {
+        const project = projects.find((p) => p.service === service);
+        return project ? project.images[0] : "";
+    });
 
     const [isHovered, setIsHovered] = useState<number>(0);
 
