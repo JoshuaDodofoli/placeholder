@@ -4,6 +4,7 @@ import { projects, services } from "@/app/utils/data"
 import BookCallButton from "../(components)/BookCallButton";
 import Tag from "@/app/components/Tag";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 
 const Services = () => {
@@ -36,12 +37,13 @@ const Services = () => {
                                 })
                             }
                         </ul>
-                        <div className="w-2xl aspect-video relative hidden xl:block bg-red-300">
-                            <img
-                                src={projectImg[isHovered] ?? ""}
-                                alt=""
-                                className="w-full h-full object-cover"
-                            />
+                        <div className="w-2xl relative aspect-video hidden xl:block bg-red-300">
+                                <Image
+                                    src={projectImg[isHovered] ?? ""}
+                                    alt=""
+                                    fill
+                                    className="w-full h-full object-cover"
+                                />
                         </div>
                     </div>
                 </div>
