@@ -3,7 +3,7 @@ import Wrapper from "@/app/components/Wrapper"
 import { projects, services } from "@/app/utils/data"
 import BookCallButton from "../(components)/BookCallButton";
 import Tag from "@/app/components/Tag";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -40,13 +40,24 @@ const Services = () => {
                                 })
                             }
                         </ul>
-                        <div className="w-2xl relative aspect-video hidden xl:block bg-red-300">
-                                <Image
-                                    src={projectImg[isHovered] ?? ""}
-                                    alt=""
-                                    fill
-                                    className="w-full h-full object-cover"
-                                />
+                        <div className="w-2xl relative aspect-video hidden xl:block overflow-hidden bg-dark-grey/5">
+                            <AnimatePresence>
+                                <motion.div
+                                    key={isHovered}
+                                    initial={{ opacity: 0, scale: 1.02, filter: "blur(8px)" }}
+                                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                                    exit={{ opacity: 0, scale: 0.97, filter: "blur(8px)" }}
+                                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image
+                                        src={projectImg[isHovered] ?? ""}
+                                        alt=""
+                                        fill
+                                        className="w-full h-full object-cover"
+                                    />
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>
