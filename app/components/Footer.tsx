@@ -19,7 +19,7 @@ const Footer = () => {
             <span className="text-xs font-medium uppercase">Navigation</span>
             {links.map((link, idx) => {
               return (
-                <li key={idx} className="list-none">
+                <li key={idx} className="list-none hover:underline underline-offset-2">
                   <Link href={link.path}>{link.name}</Link>
                 </li>
               )
@@ -29,7 +29,7 @@ const Footer = () => {
             <span className="text-xs font-medium uppercase">Socials</span>
             {socials.map((social, idx) => {
               return (
-                <li key={idx} className="list-none">
+                <li key={idx} className="list-none  hover:underline underline-offset-2">
                   <Link href={social.path}>{social.name}</Link>
                 </li>
               )
